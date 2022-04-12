@@ -4,10 +4,6 @@
 * {
     box-sizing: border-box; 
 }
-body {
-    width: 1000px;
-    max-width: 100%;
-}
 .no-gap,
 .gapless {
     --gap-size: 0rem;
