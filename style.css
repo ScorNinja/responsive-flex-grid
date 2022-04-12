@@ -23,9 +23,6 @@
     flex-wrap: wrap;
     gap: var(--gap-size);
     padding: var(--gap-size);
-    justify-content: center;
-    align-content: center;
-    align-items: center;
 }
 .flex-grid > * {
     padding: var(--gap-size) / 2;
