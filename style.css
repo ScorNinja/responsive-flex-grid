@@ -4,6 +4,10 @@
 * {
     box-sizing: border-box; 
 }
+body {
+    width: 1000px;
+    max-width: 100%;
+}
 .no-gap,
 .gapless {
     --gap-size: 0rem;
@@ -28,14 +32,10 @@
     padding: var(--gap-size) / 2;
     --numerator: 1;
     --denominator: 1;
-    --gapped-fraction: calc(
-      var(--numerator)
-      * (var(--gap-size) + 100%)
-      / var(--denominator)
-      - var(--gap-size)
-    );
+    --gapped-fraction: calc(var(--numerator) * (var(--gap-size) + 100%) / var(--denominator) - var(--gap-size));
     flex: var(--gapped-fraction);
 }
+.flex-grid > :not([class*=_]) { flex: content }
 [class*=\/1] { --denominator: 1; }
 [class*=\/2] { --denominator: 2; }
 [class*=\/3] { --denominator: 3; }
