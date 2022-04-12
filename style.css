@@ -31,7 +31,7 @@
     --gapped-fraction: calc(var(--numerator) * (var(--gap-size) + 100%) / var(--denominator) - var(--gap-size));
     flex: var(--gapped-fraction);
 }
-.flex-grid > :not([class*=_]) { flex: content }
+.flex-grid > :not([class*=_]) { flex: 100 1 content; }
 [class*=\/1] { --denominator: 1; }
 [class*=\/2] { --denominator: 2; }
 [class*=\/3] { --denominator: 3; }
