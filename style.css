@@ -1,0 +1,42 @@
+:root {
+  --gap-size: 1rem;
+}
+* {
+    box-sizing: border-box; 
+}
+.gapless {
+    --gap-size: 0rem;
+}
+.gap-half {
+    --gap-size: .5rem;
+}
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-size);
+    padding: var(--gap-size);
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.flex > * {
+    padding: var(--gap-size) / 2;
+    --numerator: 1;
+    --denominator: 1;
+    --gapped-fraction: calc(var(--numerator) * (var(--gap-size) + 100%) / var(--denominator) - var(--gap-size));
+    flex: var(--gapped-fraction);
+}
+[class*=\/1] { --denominator: 1; }
+[class*=\/2] { --denominator: 2; }
+[class*=\/3] { --denominator: 3; }
+[class*=\/4] { --denominator: 4; }
+[class*=\/5] { --denominator: 5; }
+[class*=_1\/] { --numerator: 1; }
+[class*=_2\/] { --numerator: 2; }
+[class*=_3\/] { --numerator: 3; }
+[class*=_4\/] { --numerator: 4; }
+[class*=_5\/] { --numerator: 5; }
+
+.wide {
+    flex: 100%;
+}
