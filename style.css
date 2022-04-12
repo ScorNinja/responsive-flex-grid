@@ -15,6 +15,9 @@
 .paddingless {
     padding: 0;
 }
+.nowrap {
+  white-space: nowrap;
+}
 .flex-grid {
     display: flex;
     flex-wrap: wrap;
@@ -49,4 +52,9 @@
 
 .wide {
     flex: 100%;
+}
+
+.boxes > * {
+  border: 2px solid rgb(62, 93, 114);
+  background-color: rgba(70, 105, 128, 0.2);
 }
